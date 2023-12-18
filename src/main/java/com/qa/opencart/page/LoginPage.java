@@ -20,6 +20,9 @@ public class LoginPage {
 	private By forgotPwdLink = By.linkText("Forgotten Password11");
 	private By logo = By.cssSelector("img[title='naveenopencart']");
 	private By RegistPageLink = By.linkText("Register");
+	private By dummyLocator = By.id("input-dummy");
+
+	
 
 	// page constructor
 
