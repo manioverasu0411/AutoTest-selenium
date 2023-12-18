@@ -20,9 +20,6 @@ public class LoginPage {
 	private By forgotPwdLink = By.linkText("Forgotten Password11");
 	private By logo = By.cssSelector("img[title='naveenopencart']");
 	private By RegistPageLink = By.linkText("Register");
-	private By dummyLocator = By.id("input-dummy");
-
-	
 
 	// page constructor
 
@@ -55,18 +52,18 @@ public class LoginPage {
 
 	@Step("username is: {0} and password {1}")
 	public AccountsPage doLogin(String username, String pwd) {
-		System.out.println("Credentials are: " + username + " : "+ pwd);
+		System.out.println("Credentials are: " + username + " : " + pwd);
 		elementUtil.waitForVisibilityOfElement(userName, AppConstants.MEDIUM_DEFAULT_WAIT).sendKeys(username);
 		elementUtil.doSendKeys(password, pwd);
 		elementUtil.doClick(loginBtn);
 		return new AccountsPage(driver);
 
 	}
-	
+
 	public RegistrationPage navigateToRegisterPage() {
 		elementUtil.waitForVisibilityOfElement(RegistPageLink, AppConstants.SHORT_DEFAULT_WAIT).click();
 		return new RegistrationPage(driver);
-				
+
 	}
 
 }
