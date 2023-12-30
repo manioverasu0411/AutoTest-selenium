@@ -6,6 +6,10 @@ public class DemoPage {
 	
 	public void demo() {
 		System.out.println("Mani - Demo");
+		if(true) {
+			System.out.println("Bye");
+		}
+
 	}
 
 }
