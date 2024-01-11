@@ -53,7 +53,6 @@ public class LoginPageTest extends BaseTest {
 	@Severity(SeverityLevel.BLOCKER)
     @Test(priority = 5)
     public void doLoginTest(){
-      // accountsPage = loginPage.doLogin("manioverasu@gmail.com","Mani@1234");
        accountsPage = loginPage.doLogin(prop.getProperty("username"),prop.getProperty("password"));
        Assert.assertTrue(accountsPage.isLogoutLinkExist());
        
