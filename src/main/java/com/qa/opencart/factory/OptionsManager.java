@@ -23,6 +23,11 @@ public class OptionsManager {
 		chromeoptions = new ChromeOptions();
 		if(Boolean.parseBoolean(prop.getProperty("headless").trim())) chromeoptions.addArguments("--headless");
 		if(Boolean.parseBoolean(prop.getProperty("incognito").trim())) chromeoptions.addArguments("--incognito");
+		
+		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+			chromeoptions.setCapability("browserName", "chrome");
+		}
+		
 		return chromeoptions;
 			
 	}
@@ -31,6 +36,11 @@ public class OptionsManager {
 		fo = new FirefoxOptions();
 		if(Boolean.parseBoolean(prop.getProperty("headless").trim())) fo.addArguments("--headless");
 		if(Boolean.parseBoolean(prop.getProperty("incognito").trim())) fo.addArguments("--incognito");
+		
+		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+			fo.setCapability("browserName", "firefox");
+		}
+		
 		return fo;
 			
 	}
@@ -39,6 +49,11 @@ public class OptionsManager {
 		eo = new EdgeOptions();
 		if(Boolean.parseBoolean(prop.getProperty("headless").trim())) eo.addArguments("--headless");
 		if(Boolean.parseBoolean(prop.getProperty("incognito").trim())) eo.addArguments("--incognito");
+		
+		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+			eo.setCapability("browserName", "edge");
+		}
+		
 		return eo;
 			
 	}
