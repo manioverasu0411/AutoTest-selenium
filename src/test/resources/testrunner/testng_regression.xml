@@ -35,8 +35,8 @@
 	</test>
 	
 	<test name="Product Info Page Test">
-		<parameter name="browser" value="firefox"/>
-		<parameter name="browserversion" value="117"/>
+		<parameter name="browser" value="chrome"/>
+		<parameter name="browserversion" value="119"/>
 		<parameter name="testname" value="Product Info Page Test"/>
 
 		<classes>
